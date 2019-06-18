@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/axios-0.18.0.js"></script>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <input type="text" @keydown.enter="fun()"  >
+    <div v-html="msg"></div>
+    <font :color="color" >zhanliangping</font>
+
+
+</div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"<a href='keydown_event.html'>百度</a>",
+            color:"red"
+
+        },
+        methods:{
+            fun:function () {
+                alert("执行了enter");
+
+            }
+        },
+        created:{
+
+        },
+
+    })
+</script>
+</html>

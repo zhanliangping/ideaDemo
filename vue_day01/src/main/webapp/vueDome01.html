@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+    <!--插值表达式（{{message}}）-->
+    {{success}}
+</div>
+</body>
+<script>
+    new Vue ({
+        el:"#app",// 表示当前vue对象接管了div区域
+        data:{//用于定义属性
+            success:"你好vue"
+        },
+        methods:{//用于定义的函数，可以通过 return 来返回函数值
+            findAll:function () {
+                alert("执行了方法")
+            }
+        },
+        created:function () {//钩子函数（created页面创建完成之后）
+           this.findAll();//此次必须用this，不能使用vue来调用方法
+        }
+    })
+</script>
+</html>
